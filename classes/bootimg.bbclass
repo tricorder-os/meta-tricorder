@@ -32,6 +32,8 @@ do_deploy_append() {
     --output ${WORKDIR}/boot.img \
     --board ${MACHINE}
 
+  install -d ${DEPLOY_DIR_IMAGE}
+
   install ${B}/${KERNEL_OUTPUT_DIR}/${KERNEL_IMAGETYPE}-dtb \
     ${DEPLOY_DIR_IMAGE}/${KERNEL_IMAGETYPE}-dtb-${BOOTIMG_BASE_NAME}.bin
 
